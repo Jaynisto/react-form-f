@@ -61,7 +61,9 @@ export default function UserInformation() {
 
   return (
     <div>
+      <small><b>{process.env.NODE_ENV}</b></small>
       <form className="info" onSubmit={handleForm}>
+        <input type='hidden' defaultValue={process.env.REACT_APP_NOT_SECRET_CODE} />
         <div>
           <label htmlFor="firstName">Name:</label>
           <input
